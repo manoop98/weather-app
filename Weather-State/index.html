@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Akumen Weather App</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Box Icons -->
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="icons/icon3.png" />
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <header>
+      <i class="bx bx-left-arrow-alt"></i>
+      Akumen Weather App
+    </header>
+
+    <!-- INPUT SECTION -->
+    <section class="input-part">
+      <p class="info-txt"></p>
+
+      <div class="content">
+        <input
+          type="text"
+          spellcheck="false"
+          placeholder="Enter City Name"
+          required
+        />
+        <div class="separator"></div>
+        <button>Location auto-detect</button>
+      </div>
+    </section>
+
+    <!-- WEATHER DISPLAY -->
+    <section class="weather-part">
+      <img src="" alt="Weather Icon" />
+
+      <div class="temp">
+        <span class="numb">_</span>
+        <span class="deg">°</span>C
+      </div>
+
+      <div class="weather">_ _</div>
+
+      <div class="location">
+        <i class="bx bx-map"></i>
+        <span>_, _</span>
+      </div>
+
+      <div class="bottom-details">
+
+        <div class="column feels">
+          <i class="bx bxs-thermometer"></i>
+          <div class="details">
+            <div class="temp">
+              <span class="numb-2">_</span>
+              <span class="deg">°</span>C
+            </div>
+            <p>Feels like</p>
+          </div>
+        </div>
+
+        <div class="column humidity">
+          <i class="bx bxs-droplet-half"></i>
+          <div class="details">
+            <span>_</span>
+            <p>Humidity</p>
+          </div>
+        </div>
+
+        <div class="column wind">
+          <i class="bx bx-wind"></i>
+          <div class="details">
+            <span>_</span>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+
+        <div class="column date-time">
+          <i class="bx bx-time"></i>
+          <div class="details">
+            <span>_</span>
+            <p>Date & Time</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CHART -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <section class="forecast" hidden>
+      <section class="charts" id="chartSection">
+        <canvas id="weatherChart"></canvas>
+      </section>
+      <div class="forecast-details"></div>
+    </section>
+
+  </div>
+
+  <!-- DARK MODE -->
+  <div class="dark-mode">
+    <span class="dark-mode-btn">
+      <i class="bx bx-moon"></i>
+    </span>
+  </div>
+
+  <!-- COLOR PICKER -->
+  <div class="color-palette">
+    <span class="theme-color"></span>
+    <span class="theme-color"></span>
+    <span class="theme-color"></span>
+    <span class="theme-color"></span>
+    <span class="theme-color"></span>
+    <span class="theme-color"></span>
+    <span class="theme-color"></span>
+    <span class="theme-color"></span>
+    <span class="theme-color"></span>
+  </div>
+
+  <!-- ✅ COPYRIGHT UPDATED -->
+  <section class="copyright">
+    <p>
+      © 2026 Akumen DevOps Team | All Rights Reserved |
+      <a href="https://www.akumenbyq.com/" target="_blank">
+        Visit Us
+      </a>
+    </p>
+  </section>
+
+  <!-- MAIN SCRIPT -->
+  <script src="js/script.js"></script>
+
+  <!-- EXTRA SCRIPT -->
+  <script>
+    const detectBtn = document.querySelector('.input-part button');
+    const backIcon = document.querySelector('.bx-left-arrow-alt');
+
+    detectBtn.addEventListener('click', () => {
+      const forecastSection = document.querySelector('.forecast');
+      forecastSection.removeAttribute('hidden');
+
+      if (typeof updateChart === "function") {
+        updateChart();
+      }
+    });
+
+    backIcon.addEventListener('click', () => {
+      location.reload();
+    });
+  </script>
+
+</body>
+</html>
