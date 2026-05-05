@@ -1,21 +1,29 @@
-<div align="center">
+# 🌦️ Weather App - Akumen DevOps Team
 
-  
-  <img src="./icons/favicon.svg" />
-  <h2 align="center">Weather State</h2>
+A simple and responsive Weather Web Application built using HTML, CSS, and JavaScript, deployed on an Azure Ubuntu Virtual Machine using Nginx.
 
- `Weather Web App to get the current weather state using the openweathermap API 🌐`
+---
 
- 
+## 🚀 Project Overview
 
-<img src="./icons/weather app.png" /> <hr>
+This project demonstrates a complete **DevOps deployment workflow**:
 
-<img src="./icons/black result.png"/>
+- Source Code Management using Git & GitHub
+- Infrastructure setup on Microsoft Azure
+- Web server configuration using Nginx
+- Deployment of a static web application
 
-<img src="./icons/theme.png" /> <hr>
+---
 
-`Don't forget to starred this repository ⭐`
+## 🛠️ Tech Stack
 
-</div>
+- Frontend: HTML, CSS, JavaScript
+- Web Server: Nginx
+- Cloud Platform: Microsoft Azure (Ubuntu VM)
+- Version Control: Git & GitHub
 
+---
 
+## 🌐 Live Deployment
+
+Access the application via: you server IP
